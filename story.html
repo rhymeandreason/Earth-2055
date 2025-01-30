@@ -23,6 +23,7 @@
 
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/story.js"></script>
+  <script src="story/2028.js"></script>
 
   <link rel="stylesheet" href="mainstyle.css">
 
@@ -58,7 +59,7 @@
   <a class="next-arrow fade-in-3"><img src="ui/next-arrow.svg" /></a>
   </div>
 </div>
-
+<!--
 <div class="timeline-section hidden-timeline">
   <div class="story">
     <h1 class="title year">
@@ -88,12 +89,14 @@
     <a class="next-arrow"><img src="ui/next-arrow.svg" /></a>
   </div>
 </div>
-
+-->
 <div class="timeline-section hidden-timeline">
+  <div class="image-container" id="2028-images"></div>
   <div class="story">
     <h1 class="title year">
       2028
     </h1>
+    <div id="2028-passages">
     <h2 class="passage fade-in-1">
       Suddenly, nature raised the stakes...promises were no longer enough.
     </h2>
@@ -107,9 +110,14 @@
       A catastrophic agricultural collapse unfolds.
     </h2>
 
-    <a class="next-arrow"><img src="ui/next-arrow.svg" /></a>
+    <a class="next-arrow" onClick="Load2028()"><img src="ui/next-arrow.svg" /></a>
+    </div>
+
+
   </div>
 </div>
+
+
 
 </body>
 

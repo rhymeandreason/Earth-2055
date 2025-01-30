@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>spinning globe</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+
+			body {
+
+				background: white;
+			}
+			.container{
+				position: relative;
+				left: -20%;
+
+				background: radial-gradient(circle at center, #C2CDCF, white 60%);
+				//background: radial-gradient(circle at center, black, white 40%);
+			}
+
+		</style>
+	</head>
+	<body>
+
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "./js/three/three.webgpu.js",
+					"three/webgpu": "./js/three/three.webgpu.js",
+					"three/tsl": "./js/three/three.tsl.js",
+					"three/addons/": "./js/three/jsm/"
+				}
+			}
+		</script>
+
+		<script type="module">
+
+			import * as THREE from 'three';
+			import { pass, color, rangeFogFactor } from 'three/tsl';
+
+			import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+
+			import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+			import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+
+			let camera, scene, renderer;
+			let postProcessing;
+
+			init();
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				container.classList.add("container");
+				document.body.appendChild( container );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+
+				scene = new THREE.Scene();
+
+				renderer = new THREE.WebGPURenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				//renderer.toneMapping = THREE.ACESFilmicToneMapping; // apply tone mapping in post processing
+				container.appendChild( renderer.domElement );
+
+				// Add a sphere to represent the globe
+				const geometry = new THREE.SphereGeometry(3, 32, 32); // Radius: 5, Width & Height Segments: 32
+				const textureLoader = new THREE.TextureLoader();
+				const earthTexture = textureLoader.load('textures/Earth_sketch.jpg');
+				const material = new THREE.MeshStandardMaterial({
+				  map: earthTexture,
+				  emissive: 0xffffff, // Add emissive color for self-lighting
+				  emissiveMap: earthTexture
+				});
+				const globe = new THREE.Mesh(geometry, material);
+				scene.add(globe);
+
+				// OrbitControls for user interaction
+//				const controls = new OrbitControls(camera, renderer.domElement);
+//				controls.enableDamping = true;
+
+				// Camera positioning
+				camera.position.z = 15;
+				globe.rotation.y -= 1.4; //nudge rotation a bit so it's nice
+
+				// Animation loop
+				const animate = () => {
+				  requestAnimationFrame(animate);
+
+				  // Rotate the globe
+				  globe.rotation.y += 0.0002;
+
+	//			  controls.update();
+				  renderer.render(scene, camera);
+				};
+
+				animate();
+
+				//
+/*
+				new RGBELoader()
+					.setPath( 'textures/equirectangular/' )
+					.load( 'royal_esplanade_1k.hdr', function ( texture ) {
+
+						texture.mapping = THREE.EquirectangularReflectionMapping;
+
+						scene.environment = texture;
+
+						// model
+
+						const loader = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
+						loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
+
+							scene.add( gltf.scene );
+
+							render();
+
+						} );
+
+					} );
+*/
+				//
+
+/*
+				controls = new OrbitControls( camera, renderer.domElement );
+				controls.minDistance = 2;
+				controls.maxDistance = 5;
+				controls.target.set( 0, - 0.1, - 0.2 );
+				controls.update();
+				controls.addEventListener( 'change', render ); // use if there is no animation loop
+*/
+				window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				render();
+
+			}
+
+			//
+
+			function render() {
+
+				postProcessing.renderAsync();
+
+			}
+
+		</script>
+
+	</body>
+</html>
