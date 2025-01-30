@@ -78,31 +78,34 @@ a{
 }
 .current-timeline .next-arrow{
   display: block;
-  animation: fadeIn 3s forwards;
-  animation-delay: 8s;
+  animation: fadeIn 1s forwards;
+  animation-delay: 6s;
 }
 
-.fade-in-text {
-  animation: fadeIn 3s forwards;
+.fade-in-fast{
+  animation: fadeIn 1s forwards;
+}
+.fade-in-text, .fade-in {
+  animation: fadeIn 2s forwards;
 }
 .fade-in-1{
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
   animation-delay: 2s;
 }
 .fade-in-2{
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
   animation-delay: 4s;
 }
 .fade-in-3{
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
   animation-delay: 6s;
 }
 .fade-in-4{
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
   animation-delay: 8s;
 }
 .fade-in-5{
-  animation: fadeIn 3s forwards;
+  animation: fadeIn 2s forwards;
   animation-delay: 10s;
 }
 .image-container{
@@ -122,6 +125,51 @@ a{
 .thumbnail:hover{
   filter: saturate(1);
   transform: scale(1.1);
+}
+
+#story-container{
+  display: none;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.8);
+}
+#story-modal{
+  width:85%;
+  max-width: 700px;
+  margin: 8% auto;
+  background: white;
+  box-shadow: 0 0 30px 10px white;
+}
+#story-modal h3{
+  font-family: "Funnel Display", monospace;
+  size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#story-modal p{
+  font-family: "Funnel Sans", monospace;
+  size: 20px;
+  line-height: 160%;
+  opacity: 0;
+}
+.continue-button{
+  text-align: center;
+  display: block;
+}
+
+#cursor-hover{
+  pointer-events: none;
+  display:none;
+  position: absolute;
+  font-family: "Funnel Sans", monospace;
+  font-size: 14px;
+  width: 220px;
+  padding: 10px;
+  background-color: rgba(255,255,255,.6);
+  z-index: 3;
 }
 
 @keyframes fadeIn {

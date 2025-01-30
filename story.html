@@ -17,10 +17,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/story.js"></script>
   <script src="story/2028.js"></script>
@@ -93,7 +89,7 @@
 <div class="timeline-section hidden-timeline">
   <div class="image-container" id="2028-images"></div>
   <div class="story">
-    <h1 class="title year">
+    <h1 class="title year fade-in">
       2028
     </h1>
     <div id="2028-passages">
@@ -113,10 +109,17 @@
     <a class="next-arrow" onClick="Load2028()"><img src="ui/next-arrow.svg" /></a>
     </div>
 
-
   </div>
 </div>
 
+<div id="story-container" class="fade-in-fast" onclick="HideStory()">
+  <div id="story-modal">
+  </div>
+</div>
+
+<div id="cursor-hover">
+
+</div>
 
 
 </body>

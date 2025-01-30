@@ -8,9 +8,20 @@ $( document ).ready(function() {
     $(".next-arrow").bind("click", AdvanceTimeline);
 });
 
+var mouseX;
+var mouseY;
+var hoveringOnImage = false;
+$(document).mousemove( function(e) {
+   mouseX = e.pageX;
+   mouseY = e.pageY;
+   if (hoveringOnImage) {
+     $("#cursor-hover").css({'top':mouseY+20,'left':mouseX+20});
+   }
+});
+
 function Load2028(){
   PlaceImages(Content2028, "#2028-images");
-  $("#2028-passages").fadeOut(2000);
+  $("#2028-passages").fadeOut(1000);
 }
 
 
@@ -34,7 +45,37 @@ var fileprefix = "story/";
     img.classList.add("thumbnail");
     img.style.left = story.left;
     img.style.top = story.top;
+    $(img).bind("click", function(){
+      LoadStory(fileprefix+ story.file);
+      }
+    );
+    $(img).bind("mouseenter", function(){
+        if( hoveringOnImage == false){
+          ShowCursorHover(story.blurb);
+          hoveringOnImage = true;
+        }
+      }
+    );
+    $(img).bind("mouseleave", function(){
+      hoveringOnImage = false;
+      $("#cursor-hover").hide();
+      }
+    );
+  //  img.addEventListener("click", function(){LoadStory(fileprefix+ story.file)});
     $(containerId).append(img);
   });
+}
 
+function ShowCursorHover(text){
+  $("#cursor-hover").text(text);
+  $("#cursor-hover").show();
+}
+
+function LoadStory(file){
+  $("#story-container").show();
+  $("#story-modal").load(file);
+}
+
+function HideStory(){
+  $("#story-container").hide();
 }
