@@ -43,6 +43,7 @@ var fileprefix = "story/";
     const img = document.createElement("img");
     img.src = fileprefix + story.image;
     img.classList.add("thumbnail");
+    img.style.animationDelay= 3*Math.random() +"s";
     img.style.left = story.left;
     img.style.top = story.top;
     $(img).bind("click", function(){
@@ -63,11 +64,12 @@ var fileprefix = "story/";
     );
   //  img.addEventListener("click", function(){LoadStory(fileprefix+ story.file)});
     $(containerId).append(img);
+
   });
 }
 
 function ShowCursorHover(text){
-  $("#cursor-hover").text(text);
+  $("#cursor-hover").html(text);
   $("#cursor-hover").show();
 }
 
