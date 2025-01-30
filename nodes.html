@@ -1,0 +1,50 @@
+<head>
+  <style> body { margin: 0; } </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js" crossorigin="anonymous"></script>
+
+  <script src="js/3d-force-graph-2021.min.js"></script>
+</head>
+
+<body>
+  <div id="3d-graph"></div>
+  <script>
+
+//using 2021 version of this library because it's not fancy
+//https://github.com/vasturiano/3d-force-graph/tree/524ebf31274efdef2980e75c7f0745cd7d9b3e73?tab=readme-ov-file
+
+    var currentNode;
+
+    const imgs = ['cat.jpg', 'dog.jpg', 'eagle.jpg', 'elephant.jpg', 'grasshopper.jpg', 'octopus.jpg', 'owl.jpg', 'panda.jpg', 'squirrel.jpg', 'tiger.jpg', 'whale.jpg'];
+
+    // Random connected graph
+    const gData = {
+      nodes: imgs.map((img, id) => ({ id, img })),
+      links: [...Array(imgs.length).keys()]
+        .filter(id => id)
+        .map(id => ({
+          source: id,
+          target: Math.round(Math.random() * (id-1))
+        }))
+    };
+
+    const Graph = ForceGraph3D()
+      (document.getElementById('3d-graph'))
+      .nodeThreeObject(({ img }) => {
+        const imgTexture = new THREE.TextureLoader().load(`./imgs/${img}`);
+        const material = new THREE.SpriteMaterial({ map: imgTexture });
+        const sprite = new THREE.Sprite(material);
+        sprite.scale.set(12, 12);
+        return sprite;
+      })
+      .onNodeClick(node => {
+        currentNode = node;
+        console.log(currentNode);
+
+      })
+      .graphData(gData);
+  </script>
+
+
+</body>
