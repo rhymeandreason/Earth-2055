@@ -1,6 +1,6 @@
 var TimelineSections;
 var CurrentTimeline = 0;
-
+var CurrentStorySection = 0;
 
 $( document ).ready(function() {
     console.log( "ready!" );
@@ -83,9 +83,33 @@ function ShowCursorHover(text){
 
 function LoadStory(file){
   $("#story-container").show();
-  $("#story-modal").load(file);
+  $("#story-content").load(file, function(){
+    //runs when load completes
+    var el = $(".story-section")[0];
+    $(el).show();
+  });
+  CurrentStorySection = 0;
+  $(".continue-button").show();
 }
 
 function HideStory(){
   $("#story-container").hide();
+}
+
+function ContinueStory(){
+  var sections = $("#story-modal .story-section");
+  //console.log(sections.length);
+  console.log(CurrentStorySection);
+
+  if (CurrentStorySection < sections.length-1){
+    var el = $(".story-section")[CurrentStorySection];
+    $(el).hide();
+    var el2 = $(".story-section")[CurrentStorySection+1];
+    $(el2).show();
+    CurrentStorySection++;
+  }
+
+  if (CurrentStorySection == sections.length-1){
+    $(".continue-button").fadeOut();
+  }
 }

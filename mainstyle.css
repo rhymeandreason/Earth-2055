@@ -62,10 +62,10 @@ a{
 
 .next-arrow{
   margin: auto auto;
+  margin-top:100px;
   text-align: center;
   font-size: 40px;
   cursor: pointer;
-  padding-top: 100px;
   display: inline-block;
   opacity: 0%;
 }
@@ -161,35 +161,50 @@ a{
   width: 100%;
   height: 100%;
   background-color: rgba(255,255,255,.8);
-  cursor: not-allowed;
 }
 #story-modal{
   z-index:3;
   position: relative;
   width:85%;
   max-width: 700px;
-  height: 80%;
-  overflow-y: scroll;
-  margin: 8% auto;
+  height: 70%;
+  margin: 5% auto;
   background: white;
   box-shadow: 0 0 30px 10px white;
 }
-#story-modal h3{
+#story-content{
+  font-family: "Funnel Sans", monospace;
+  size: 20px;
+  line-height: 160%;
+  margin-top:40px;
+  height:70%;
+  overflow-y: scroll;
+}
+.story-section{
+  display:none;
+}
+#story-content h3{
   font-family: "Funnel Display", monospace;
   size: 20px;
   text-align: center;
   margin-bottom: 50px;
 }
-#story-modal p{
+#story-content p{
   font-family: "Funnel Sans", monospace;
   size: 20px;
   line-height: 160%;
-  opacity: 0;
+  //opacity: 0;
 }
-.continue-button{
-  display: none;
+.continue-button, .close-button, .next-arrow{
+  opacity:0;
   text-align: center;
   display: block;
+  transform: scale(1.0);
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+.continue-button:hover, .close-button:hover, .next-arrow:hover{
+  transform: scale(1.2);
 }
 
 #cursor-hover{
