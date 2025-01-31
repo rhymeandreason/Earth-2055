@@ -78,7 +78,7 @@ var Content2028 = [
     left: "85%",
     top: "30%",
     blurb:"Typhoon Jiao tore through Vietnam’s Mekong Delta with 200 km/h winds, flooding rice fields with seawater. Once-green fields became salty wastelands, with crops rotting in brackish pools.",
-    image_attribution: ""
+    image_attribution: "https://kathmandupost.com/national/2021/10/19/rains-damage-ripe-paddy-crops-in-several-districts"
   },
 
   {
