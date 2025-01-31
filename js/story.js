@@ -40,30 +40,37 @@ function PlaceImages(content, containerId){
 var fileprefix = "story/";
 
   content.forEach (story =>{
+    const imgdiv = document.createElement("div");
+    imgdiv.classList.add("thumbnail");
+    imgdiv.style.animationDelay= 3*Math.random() +"s";
+    imgdiv.style.left = story.left;
+    imgdiv.style.top = story.top;
+
     const img = document.createElement("img");
     img.src = fileprefix + story.image;
-    img.classList.add("thumbnail");
-    img.style.animationDelay= 3*Math.random() +"s";
-    img.style.left = story.left;
-    img.style.top = story.top;
-    $(img).bind("click", function(){
+    //img.classList.add("thumbnail");
+
+    $(imgdiv).bind("click", function(){
       LoadStory(fileprefix+ story.file);
       }
     );
-    $(img).bind("mouseenter", function(){
+    $(imgdiv).bind("mouseenter", function(){
         if( hoveringOnImage == false){
           ShowCursorHover(story.blurb);
           hoveringOnImage = true;
         }
       }
     );
-    $(img).bind("mouseleave", function(){
+    $(imgdiv).bind("mouseleave", function(){
       hoveringOnImage = false;
       $("#cursor-hover").hide();
       }
     );
-  //  img.addEventListener("click", function(){LoadStory(fileprefix+ story.file)});
-    $(containerId).append(img);
+
+    $(imgdiv).append(img);
+    $(imgdiv).append("<p>"+story.location+"</p>");
+    $(containerId).append(imgdiv);
+
 
   });
 }

@@ -123,16 +123,25 @@ a{
   cursor: pointer;
   position: absolute;
   opacity:0;
-  width: 100px;
-  filter: saturate(0);
+  width: 120px;
   animation: fadeIn 3s forwards;
   animation-delay: 2s;
   transform: scale(1.0);
   transition: all .3s ease-out;
 }
+.thumbnail img{
+  width: 120px;
+  filter: saturate(0);
+}
 .thumbnail:hover{
-  filter: saturate(1);
   transform: scale(1.15);
+}
+.thumbnail img:hover{
+  filter: saturate(1);
+}
+.thumbnail p{
+  font-size: 14px;
+  margin: 0px;
 }
 
 #story-container{
