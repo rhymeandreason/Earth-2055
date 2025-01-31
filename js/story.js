@@ -22,6 +22,7 @@ $(document).mousemove( function(e) {
 function Load2028(){
   PlaceImages(Content2028, "#2028-images");
   $("#2028-passages").fadeOut(1000);
+  $("#2028-images").show();
 }
 
 
@@ -42,7 +43,7 @@ var fileprefix = "story/";
   content.forEach (story =>{
     const imgdiv = document.createElement("div");
     imgdiv.classList.add("thumbnail");
-    imgdiv.style.animationDelay= 3*Math.random() +"s";
+    imgdiv.style.animationDelay= 3*Math.random()+1.5 +"s";
     imgdiv.style.left = story.left;
     imgdiv.style.top = story.top;
 

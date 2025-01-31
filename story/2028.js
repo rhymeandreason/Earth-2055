@@ -21,8 +21,8 @@ var Content2028 = [
     location: "Machakos, Kenya",
     image: "2028/corn-disease.jpg",
     file: "2028/kenya.html",
-    left: "60%",
-    top: "40%",
+    left: "70%",
+    top: "48%",
     blurb: "<b>Wanjiru Kamau</b> has always relied on maize to feed her family, but now her crops are failing at an alarming rate.",
     image_attribution: "https://www.istockphoto.com/photo/close-up-of-a-rotten-corn-in-the-middle-gm182250766-11279889?searchscope=image%2Cfilm"
   },
@@ -40,7 +40,7 @@ var Content2028 = [
     image: "2028/seed-vault.jpg",
     file: "2028/svalbard.html",
     left: "85%",
-    top: "55%",
+    top: "60%",
     blurb:"<b>Dr. Ingrid Halvorsen</b>, a plant geneticist working at the Svalbard Seed Vault, studies global crop disease trends, and the data is terrifying. She sees outbreaks accelerating—fungal strains that shouldn’t exist, staple crops failing simultaneously across continents.",
     image_attribution: "https://commons.wikimedia.org/wiki/File:Global_Seed_Vault.JPG"
   },
