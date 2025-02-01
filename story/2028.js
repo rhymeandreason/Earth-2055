@@ -80,15 +80,14 @@ var Content2028 = [
     blurb:"Typhoon Jiao tore through Vietnam’s Mekong Delta with 200 km/h winds, flooding rice fields with seawater. Once-green fields became salty wastelands, with crops rotting in brackish pools.",
     image_attribution: "https://kathmandupost.com/national/2021/10/19/rains-damage-ripe-paddy-crops-in-several-districts"
   },
-
   {
-    location:"",
-    image: "2028/",
-    file: "2028/",
-    left: "0%",
-    top: "0%",
-    blurb:"",
-    image_attribution: ""
+    location:"Central Valley, California",
+    image: "2028/almondtrees.jpg",
+    file: "2028/centralvalley.html",
+    left: "7%",
+    top: "70%",
+    blurb:"With water sources dwindling, <b>Daniel Wu</b> is under pressure to keep his billion-dollar almond business afloat.",
+    image_attribution: "https://www.homedepot.com/p/Online-Orchards-3-ft-Halls-Hardy-Almond-Bare-Root-Tree-with-Very-Cold-Hardy-Fresh-Almonds-NTAL203/323482160"
   }
 
 ];
