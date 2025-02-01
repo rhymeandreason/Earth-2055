@@ -1,4 +1,4 @@
-var Content2028 = [
+var Content2028b = [
   {
     location: "New Delhi, India",
     image: "2028b/newdelhi.jpg",
@@ -12,17 +12,17 @@ var Content2028 = [
     location: "Oklahoma, USA",
     image: "2028b/oklahoma1.jpg",
     file: "2028b/oklahoma.html",
-    left: "35%",
+    left: "22%",
     top: "20%",
     blurb: "",
     image_attribution: "https://unsplash.com/photos/herd-of-black-cattle-5Dkb-7_dVxA"
   },
   {
     location: "Geneva, Switzerland",
-    image: "2028b/corn-disease.jpg",
+    image: "2028b/un.jpg",
     file: "2028b/un.html",
-    left: "70%",
-    top: "48%",
+    left: "61%",
+    top: "58%",
     blurb: "",
     image_attribution: "https://commons.wikimedia.org/wiki/File:United_Nations_Flags.jpg"
   },
@@ -30,8 +30,8 @@ var Content2028 = [
     location: "California, USA",
     image: "2028b/suburbs.jpg",
     file: "2028b/sandiego.html",
-    left: "65%",
-    top: "20%",
+    left: "74%",
+    top: "7%",
     blurb:"",
     image_attribution: "https://unsplash.com/photos/an-aerial-view-of-a-city-with-lots-of-houses-FGFwCwGPjpI"
   },
@@ -57,8 +57,8 @@ var Content2028 = [
     location:"Beijing, China",
     image: "2028b/beijing.jpg",
     file: "2028b/china.html",
-    left: "55%",
-    top: "65%",
+    left: "41%",
+    top: "64%",
     blurb:"",
     image_attribution: "https://commons.wikimedia.org/wiki/File:%E5%BA%86%E7%A5%9D%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E6%88%90%E7%AB%8B100%E5%91%A8%E5%B9%B4_%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA_%E4%BA%BA%E6%B0%91%E5%A4%A7%E4%BC%9A%E5%A0%82_%E7%BA%A2%E6%97%97.jpg"
   },
@@ -66,8 +66,8 @@ var Content2028 = [
     location: "Washington, D.C., USA",
     image: "2028b/dc.jpg",
     file: "2028b/washingtondc.html",
-    left: "30%",
-    top: "70%",
+    left: "31%",
+    top: "58%",
     blurb:"",
     image_attribution: "https://commons.wikimedia.org/wiki/File:WhiteHouseSouthFacade.JPG"
   },
@@ -84,8 +84,8 @@ var Content2028 = [
     location:"Pearl Harbor, Hawaii",
     image: "2028b/pearlharbor.jpg",
     file: "2028b/hawaii.html",
-    left: "20%",
-    top: "80%",
+    left: "17%",
+    top: "79%",
     blurb:"",
     image_attribution: "https://commons.wikimedia.org/wiki/File:Ford_Island_aerial_photo_RIMPAC_1986.JPEG"
   },
@@ -93,14 +93,14 @@ var Content2028 = [
     location:"Berlin, Germany",
     image: "2028b/berlin.jpg",
     file: "2028b/germany.html",
-    left: "70%",
+    left: "72%",
     top: "40%",
     blurb:"",
     image_attribution: "https://commons.wikimedia.org/wiki/File:Reichstag_Building,_Bundestag_(Ank_Kumar,_Infosys)_01.jpg"
   },
   {
     location:"Hungary - Serbia border",
-    image: "2028b/",
+    image: "2028b/hungaryborder.jpg",
     file: "2028b/hungary.html",
     left: "80%",
     top: "80%",
@@ -108,20 +108,20 @@ var Content2028 = [
     image_attribution: "https://commons.wikimedia.org/wiki/File:International_border_between_Hungary_and_Serbia_near_Backi_Breg.JPG"
   },
   {
-    location:"Japan",
+    location:"Hokkaido, Japan",
     image: "2028b/hokkaidofarm.jpg",
     file: "2028b/japan.html",
-    left: "30%",
+    left: "7%",
     top: "60%",
     blurb:"",
     image_attribution: "https://unsplash.com/photos/gray-concrete-road-between-green-grass-field-under-white-clouds-and-blue-sky-during-daytime-Bzi4HlBEUPs"
   },
   {
-    location:"",
+    location:"Los Angeles, USA",
     image: "2028b/losangeles.jpg",
     file: "2028b/losangeles.html",
-    left: "50%",
-    top: "70%",
+    left: "47%",
+    top: "85%",
     blurb:"",
     image_attribution: "https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-WG28Z3OeFL4"
   }

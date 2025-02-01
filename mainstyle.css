@@ -85,7 +85,7 @@ a{
 .current-timeline .next-arrow{
   display: block;
   animation: fadeIn 1s forwards;
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 
 .fade-in-fast{
@@ -114,8 +114,8 @@ a{
   animation: fadeIn 2s forwards;
   animation-delay: 10s;
 }
-.image-container .passage{
-  text-align:center;
+.centered {
+  text-align: center;
 }
 .image-container{
   position: absolute;

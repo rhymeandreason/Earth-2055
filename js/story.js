@@ -27,7 +27,7 @@ function Load2028(){
 
 function Load2028b(){
   AdvanceTimeline();
-  PlaceImages(Content2028, "#2028b-images");
+  PlaceImages(Content2028b, "#2028b-images");
   $("#2028b-images").show();
 }
 
