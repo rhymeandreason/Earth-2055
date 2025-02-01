@@ -135,14 +135,15 @@ a{
   cursor: pointer;
   position: absolute;
   opacity:0;
-  width: 120px;
+  width: 7%;
+  min-width:75px;
   animation: fadeIn 3s forwards;
   animation-delay: 2s;
   transform: scale(1.0);
   transition: all .3s ease-out;
 }
 .thumbnail img{
-  width: 120px;
+  width: 100%;
   filter: saturate(0);
 }
 .thumbnail:hover{

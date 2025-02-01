@@ -13,7 +13,7 @@ var Content2028b = [
     image: "2028b/oklahoma1.jpg",
     file: "2028b/oklahoma.html",
     left: "22%",
-    top: "20%",
+    top: "5%",
     blurb: "",
     image_attribution: "https://unsplash.com/photos/herd-of-black-cattle-5Dkb-7_dVxA"
   },
@@ -57,8 +57,8 @@ var Content2028b = [
     location:"Beijing, China",
     image: "2028b/beijing.jpg",
     file: "2028b/china.html",
-    left: "41%",
-    top: "64%",
+    left: "38%",
+    top: "77%",
     blurb:"",
     image_attribution: "https://commons.wikimedia.org/wiki/File:%E5%BA%86%E7%A5%9D%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E6%88%90%E7%AB%8B100%E5%91%A8%E5%B9%B4_%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA_%E4%BA%BA%E6%B0%91%E5%A4%A7%E4%BC%9A%E5%A0%82_%E7%BA%A2%E6%97%97.jpg"
   },
@@ -111,7 +111,7 @@ var Content2028b = [
     location:"Hokkaido, Japan",
     image: "2028b/hokkaidofarm.jpg",
     file: "2028b/japan.html",
-    left: "7%",
+    left: "3%",
     top: "60%",
     blurb:"",
     image_attribution: "https://unsplash.com/photos/gray-concrete-road-between-green-grass-field-under-white-clouds-and-blue-sky-during-daytime-Bzi4HlBEUPs"
@@ -120,8 +120,8 @@ var Content2028b = [
     location:"Los Angeles, USA",
     image: "2028b/losangeles.jpg",
     file: "2028b/losangeles.html",
-    left: "47%",
-    top: "85%",
+    left: "54%",
+    top: "91%",
     blurb:"",
     image_attribution: "https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-WG28Z3OeFL4"
   }
