@@ -82,6 +82,7 @@ var Content2028 = [
   },
 
   {
+    location:"",
     image: "2028/",
     file: "2028/",
     left: "0%",

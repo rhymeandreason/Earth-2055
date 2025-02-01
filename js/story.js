@@ -5,7 +5,7 @@ var CurrentStorySection = 0;
 $( document ).ready(function() {
     console.log( "ready!" );
     TimelineSections = $(".timeline-section");
-    $(".next-arrow").bind("click", AdvanceTimeline);
+    $(".timeline-button").bind("click", AdvanceTimeline);
 });
 
 var mouseX;
@@ -23,6 +23,12 @@ function Load2028(){
   PlaceImages(Content2028, "#2028-images");
   $("#2028-passages").fadeOut(1000);
   $("#2028-images").show();
+}
+
+function Load2028b(){
+  AdvanceTimeline();
+  PlaceImages(Content2028, "#2028b-images");
+  $("#2028b-images").show();
 }
 
 
