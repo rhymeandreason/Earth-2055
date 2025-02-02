@@ -9,9 +9,9 @@ var Content2028 = [
     image_attribution: "https://unsplash.com/photos/yellow-farm-tractor--FLJ-LklpUQ"
   },
   {
-    location: "Oklahoma, USA",
-    image: "2028/oklahoma1.jpg",
-    file: "2028/oklahoma.html",
+    location: "Kansas, USA",
+    image: "2028/kansas.jpg",
+    file: "2028/kansas.html",
     left: "35%",
     top: "20%",
     blurb: "<b>Emily Carter</b>, a fourth-generation wheat farmer, battles an intense drought and record heatwaves. Now a mysterious fungal disease infects the little wheat she has left.",
@@ -45,12 +45,12 @@ var Content2028 = [
     image_attribution: "https://commons.wikimedia.org/wiki/File:Global_Seed_Vault.JPG"
   },
   {
-    location:"Iowa, USA",
+    location:"Texas, USA",
     image: "2028/iowa.jpg",
-    file: "2028/iowa.html",
+    file: "2028/texas.html",
     left: "20%",
     top: "48%",
-    blurb:"<b>Tom Callahan</b> has always trusted in the system—big agriculture, government subsidies, genetically modified seeds. But when his fields are hit by a fungal outbreak that resists all treatments, he’s left with mountains of debt and no answers.",
+    blurb:"<b>Luke Callahan</b> , a third generation wheat farmer, faces crippling drought." ,
     image_attribution: "https://unsplash.com/photos/white-building-on-plant-field-during-day-CD1CT8nDkJk"
   },
   {
