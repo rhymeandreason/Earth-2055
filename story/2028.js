@@ -84,10 +84,28 @@ var Content2028 = [
     location:"Central Valley, California",
     image: "2028/almondtrees.jpg",
     file: "2028/centralvalley.html",
-    left: "7%",
-    top: "70%",
+    left: "5%",
+    top: "10%",
     blurb:"With water sources dwindling, <b>Daniel Wu</b> is under pressure to keep his billion-dollar almond business afloat.",
     image_attribution: "https://www.homedepot.com/p/Online-Orchards-3-ft-Halls-Hardy-Almond-Bare-Root-Tree-with-Very-Cold-Hardy-Fresh-Almonds-NTAL203/323482160"
+  },
+  {
+    location: "Washington, D.C., USA",
+    image: "2028/dc.jpg",
+    file: "2028/washingtondc.html",
+    left: "67%",
+    top: "77%",
+    blurb:"The president of the United States has the option to act quickly...",
+    image_attribution: "https://commons.wikimedia.org/wiki/File:WhiteHouseSouthFacade.JPG"
+  },
+  {
+    location: "Tokyo, Japan",
+    image: "2028/tokyo.jpg",
+    file: "2028/japan.html",
+    left: "8%",
+    top: "74%",
+    blurb:"Japanese leaders evaluate their options for feeding their nation.",
+    image_attribution: "https://en.wikipedia.org/wiki/Ministry_of_Agriculture,_Forestry_and_Fisheries_%28Japan%29"
   }
 
 ];
